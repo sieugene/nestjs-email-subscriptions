@@ -16,6 +16,7 @@ export class SubscribersService {
     return newSubscriber;
   }
   async getAllSubscribers() {
-    return this.subscribersRepository.find();
+    const data = await this.subscribersRepository.find();
+    return data;
   }
 }
